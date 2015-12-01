@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>NIPS Schedule</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<script id="tooltip-template" type="text/template">
+		  <ul class="google-visualization-tooltip-item-list">
+		    <li class="google-visualization-tooltip-item">
+		      <strong><%= title %></strong>
+		    </li>
+		  </ul>
+		  <div class="google-visualization-tooltip-separator"></div>
+		  <ul class="google-visualization-tooltip-action-list">
+		    <li class="google-visualization-tooltip-action">
+		      <strong><%= type %>:</strong> <span><%= startString %> &ndash; <%= endString %><span>
+		    </li>
+		    <li class="google-visualization-tooltip-action">
+		      <strong>Duration:</strong> <span><%= duration %></span>
+		    </li>
+				<% if (authorString !== '') { %>
+			    <li class="google-visualization-tooltip-action">
+			      <strong>Authors:</strong> <span><%= authorString %></span>
+			    </li>
+				<% } %>
+		    <li class="google-visualization-tooltip-action">
+		      <strong>Room:</strong> <span><%= room %></span>
+		    </li>
+				<% if (description !== '') { %>
+			    <li class="google-visualization-tooltip-action">
+						<%- description %>
+					</li>
+				<% } %>
+		  </ul>
+		</script>
+
+		<header>
+	    <h1>NIPS Schedule</h1>
+			<p>Let me know if you found this useful: <a href="https://twitter.com/jimmfleming">@jimmfleming</a></p>
+			<noscript>
+				<p>Requires JavaScript to load the calendar. Sorry... :/</p>
+			</noscript>
+		</header>
+
+    <div id="schedule"></div>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization',
+       'version':'1.1','packages':['timeline']}]}"></script>
+    <script src="bower_components/moment/min/moment.min.js"></script>
+    <script src="bower_components/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="main.js"></script>
+
+	</body>
+</html>

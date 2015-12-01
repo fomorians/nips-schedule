@@ -1,0 +1,30 @@
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-weight: 400;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+
+header {
+  margin-bottom: 36px;
+}
+
+header p {
+  margin: 0 0 16px;
+  color: #888;
+}
+
+header a {
+  color: #888;
+}
